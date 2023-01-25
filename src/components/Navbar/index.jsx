@@ -1,0 +1,218 @@
+import React from "react";
+import "./stye.scss";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GiArcheryTarget } from "react-icons/gi";
+import Img from "./../../assets/images/holod.png";
+import { IoMdClose } from "react-icons/io";
+import { useState, useEffect } from "react";
+
+const index = () => {
+  const bodyStyle = document.body.style;
+
+  const [modal, setModal] = useState(false);
+  const [lock, setLock] = useState(bodyStyle.overflowY === "hidden");
+  useEffect(() => {
+    bodyStyle.overflowY = lock ? "hidden" : "auto";
+  }, [lock, bodyStyle]);
+
+  const [categrory, setCategory] = useState([]);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/categories/")
+      .then((res) => res.json())
+      .then((json) => setCategory(json));
+  }, []);
+  return (
+    <>
+      <div className="navbar position-relative">
+        <div className="container">
+          <nav className="d-flex justify-content-between flex-row align-items-center">
+            <div className="category__tab w-100">
+              <button
+                
+                className="rounded-2 btn w-100 fw-bold btn btn-warning rounded-0 d-flex text-black gap-2 align-items-center"
+                onClick={() => setModal((e) => !e)}
+              >
+                {modal ? (
+                  <IoMdClose className="menu__category" />
+                ) : (
+                  <GiHamburgerMenu className="menu__category" />
+                )}
+                Category
+              </button>
+            </div>
+            <ul className="flex-row list-group d-flex justify-content-between nav-list align-items-center">
+              <li className="list-items">
+                <button
+                  href="#li"
+                  className="underline-none btn fw-bold btn btn-warning rounded-0 d-flex text-black gap-2 align-items-center"
+                  onClick={() => setModal((e) => !e)}
+                >
+                  {modal ? (
+                    <IoMdClose className="menu__category" />
+                  ) : (
+                    <GiHamburgerMenu className="menu__category" />
+                  )}
+                  Category
+                </button>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Акции
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Оплата
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Установка
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Обмен и возврат
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Для бизнеса
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Контакты
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Статус заказа
+                </a>
+              </li>
+              <li className="list-items">
+                <a href="#li" className="underline-none fw-bold">
+                  Доставка
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className={`modal-layer ${modal ? "d-flex" : "d-none"}`}>
+            <div
+              className={`modal-layer ${
+                modal ? "d-flex" : "d-none"
+              } category-modal d-flex justify-content-between flex-row bg-white w-100`}
+            >
+              <div className="modal-left">
+                <ul className="modal-list d-flex flex-column align-items-start  border-0">
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      {/* <GiArcheryTarget className="archer " /> */}
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-baseline align-items-center gap-2"
+                    >
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                  <li className="modal-item">
+                    <a
+                      href="#link"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                    >
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      Встраиваемая кухонная техника
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                className="modal-right w-100 d-flex
+            justify-content-between align-items-start gap-2 px-2"
+              >
+                <div className="modal__inner">
+                  <ul className="modal-list">
+                    <li className="modal__inner-item">
+                      <a
+                        href="#link"
+                        className="text-decoration-none text-black"
+                      >
+                        Holodilnik
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="modal__inner--right ">
+                  <h3>Modal right</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default index;

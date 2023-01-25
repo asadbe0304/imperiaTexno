@@ -1,0 +1,49 @@
+.recomendation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .recomendation__title {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #2d2e30;
+    text-align: left;
+  }
+}
+.card {
+  padding: 20px;
+  width: 275px !important;
+  box-shadow: 0 0 0 1px #ededed;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  img {
+    width: 240px;
+  }
+}
+.card-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #5a5858;
+}
+.like-heart {
+  top: 10px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.recomendation__card {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar{
+    height: 0px;
+}
