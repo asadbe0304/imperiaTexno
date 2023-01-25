@@ -28,8 +28,8 @@ export default function App() {
         <Swiper
           slidesPerView={4}
           spaceBetween={20}
-          slidesPerGroup={4}
-          loop={false}
+          slidesPerGroup={5}
+          loop={true}
           loopFillGroupWithBlank={false}
           pagination={{
             clickable: false,
