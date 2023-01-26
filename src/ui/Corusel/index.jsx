@@ -153,7 +153,7 @@ export default function App() {
           },
         }}
         grabCursor={true}
-        navigation={true}
+        navigation={false}
         freeMode={true}
         modules={[FreeMode, Navigation]}
         className="mySwiper px-4 d-flex justify-content-center py-5 gap-1 align-items-center"
