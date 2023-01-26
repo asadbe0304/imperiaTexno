@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import { context } from "./../../context/context";
 // import { AiOutlineShoppingCart } from "react-icons/ai";
 import Card from "./../Card/Card";
-// import "./style.scss";
+import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -41,6 +41,33 @@ export default function App() {
           grabCursor={true}
           navigation={true}
           modules={[Pagination, Navigation]}
+          breakpoints={{
+            1210: {
+              width: 1210,
+              slidesPerView: 4,
+              // slidesPerGroup: 4
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            370: {
+              width: 370,
+              spaceBetween: 20,
+              slidesPerView: 1,
+            },
+            320: {
+              width: 320,
+              spaceBetween: 10,
+              slidesPerView: 1,
+            },
+            240:{
+              width: 320,
+              spaceBetween:30,
+              slidesPerView: 1,
+            }
+          }}
           className="mySwiper px-4 d-flex justify-content-center py-5 gap-1 align-items-center"
         >
           <SwiperSlide>

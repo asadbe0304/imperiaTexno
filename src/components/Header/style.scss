@@ -75,12 +75,12 @@ $zindex-modal: 223;
   font-weight: 500;
   color: #555;
 }
-.mobile__search--bar{
+.mobile__search--bar {
   display: none;
 }
-.mobile-search-btn{
+.mobile-search-btn {
   display: none;
-border-radius: 10px;
+  border-radius: 10px;
 }
 @media screen and (max-width: 1190px) {
   .header__search {
@@ -94,20 +94,26 @@ border-radius: 10px;
   .search-bar {
     width: 100%;
   }
-  .admin__icon{
+  .admin__icon {
     width: 28px;
     height: 28px;
     padding: 0;
   }
-  .like__icon{
+  .like__icon {
     width: 28px;
     height: 28px;
     padding: 0;
   }
-.header__shopping--cart{
-  width: 28px;
-  height: 28px;
+  .header__shopping--cart {
+    width: 28px;
+    height: 28px;
+  }
 }
+
+.Hambur {
+  display: none;
+  width: 24px;
+  height: 24px;
 }
 @media screen and (max-width: 1160px) {
   .header__search {
@@ -117,60 +123,80 @@ border-radius: 10px;
   .search-bar {
     display: none;
   }
-  .mobile-search-btn{
+  .mobile-search-btn {
     display: block;
   }
 }
 @media screen and (max-width: 830px) {
-  .header__call{
+  .header__call {
     display: none;
   }
-  .header__location{
+  .header__location {
     display: none !important;
   }
-  .order__text{
+  .order__text {
     display: none;
   }
-  .badge{
-    top: -8px;
-    right: -12px;
+  .badge {
+    top: -10px;
+    right: 24px;
     font-size: 10px;
     padding: 5px;
   }
-  .admin{
+
+  .admin {
     padding: 0;
     border: 0;
   }
-  .like{
+  .like {
     padding: 0;
     border: 0;
+  }
+  .Hambur {
+    display: block;
   }
 }
 @media screen and (max-width: 530px) {
-  .header__shopping--cart{
+  .header__shopping--cart {
     width: 24px;
     height: 24px;
   }
-  .admin__icon{
-    width: 24px;
-    height: 24px;
-    padding: 0;
-  }
-  .like__icon{
+  .admin__icon {
     width: 24px;
     height: 24px;
     padding: 0;
   }
-  .admin{
+  .like__icon {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+  .admin {
     padding: 0;
     border: 0;
   }
-  .like{
+  .like {
     padding: 0;
     border: 0;
   }
-  .header__logo--img{
+  .header__logo--img {
     width: 68px;
     height: 38px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .header__inner {
+    margin-left: 10px;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 310px) {
+  .header__inner {
+    margin-left: 10px;
+    width: 100%;
+  }
+  .header__logo{
+    display: none;
   }
 }

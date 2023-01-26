@@ -1,0 +1,21 @@
+@media screen and (max-width: 370px) {
+    .card__popular{
+        width: 260px !important;
+    img{
+        width: 90%;
+    }
+    }
+
+}
+@media screen and (max-width: 340px) {
+    .card__popular{
+        width: 240px !important;
+    img{
+        width: 90%;
+    }
+    }
+    .card__popular:last-child{
+        margin-right: 20px;
+    }
+
+}

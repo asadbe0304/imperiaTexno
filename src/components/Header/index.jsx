@@ -9,6 +9,7 @@ import { RiAdminFill } from "react-icons/ri";
 import { FcLike } from "react-icons/fc";
 import { Badge } from "react-bootstrap";
 import Cart from "../../ui/Cart/index";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 const index = () => {
@@ -67,15 +68,7 @@ const index = () => {
                 <BsSearch className="text-white fw-bold" />
               </InputGroup.Text>
             </InputGroup>
-            {/* mobile search bar */}
-            <div className="mobile-search-btn">
-              <InputGroup.Text
-                id="basic-addon1"
-                className="bg-warning border-0 rounded-2 mx-2"
-              >
-                <BsSearch className="text-white fw-bold" />
-              </InputGroup.Text>
-            </div>
+          
             <div className="header__call">
               <a
                 href="tel:++998932502719"
@@ -93,6 +86,15 @@ const index = () => {
               </div>
             </div>
             <div className="header__inner align-items-center d-flex justify-content-between gap-3">
+                {/* mobile search bar */}
+            <div className="mobile-search-btn m-0">
+              <InputGroup.Text
+                id="basic-addon1"
+                className="bg-warning border-0 rounded-2 m-0"
+              >
+                <BsSearch className="text-white fw-bold" />
+              </InputGroup.Text>
+            </div>
               <div className="header__like--order d-flex justify-content between gap-3">
                 <div className="admin">
                   <RiAdminFill className="admin__icon" />
@@ -112,6 +114,7 @@ const index = () => {
                 <p className="p-0 mx-2 my-0 order__text">
                   В корзине нет товаров
                 </p>
+                <GiHamburgerMenu className="Hambur"/>
                 <IoMdClose
                   className={`position-fixed close-arrow ${
                     show ? "show" : "hide"

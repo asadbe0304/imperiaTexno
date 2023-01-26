@@ -28,12 +28,27 @@ export default function App() {
         <Swiper
           slidesPerView={4}
           spaceBetween={20}
-          slidesPerGroup={5}
-          loop={true}
+          slidesPerGroup={4}
+          loop={false}
           loopFillGroupWithBlank={false}
           pagination={{
             clickable: false,
           }}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1,
+              slidesPerGroup: 2
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 4,
+              slidesPerGroup: 4
+            },
+          }}
+        
           grabCursor={true}
           navigation={true}
           modules={[Pagination, Navigation]}
