@@ -1,6 +1,6 @@
 .layer-cart {
   position: fixed;
-  z-index: 5;
+  z-index: 445;
   top: 0;
   right: 0;
   width: 100%;
@@ -72,3 +72,20 @@
   height: 80px;
 }
 
+@media screen and (max-width:550px) {
+  .cart{
+    width: 90%!important;
+  }
+  .cart__title{
+    font-size: 18px!important;
+  }
+}
+@media screen and (max-width:450px) {
+ .cart__body--card{
+  width: 100%!important;
+  display: flex;
+  flex-direction: column!important;
+  align-items: center!important;
+  justify-content: space-between;
+ }
+}

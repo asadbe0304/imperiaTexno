@@ -64,7 +64,7 @@ $zindex-modal: 223;
   right: 110px;
 }
 .close-arrow {
-  z-index: 5;
+  z-index: 2455;
 }
 .navi {
   width: 20px;
@@ -127,10 +127,12 @@ $zindex-modal: 223;
     display: block;
   }
 }
+
 @media screen and (max-width: 830px) {
   .header__call {
     display: none;
   }
+
   .header__location {
     display: none !important;
   }
@@ -196,7 +198,7 @@ $zindex-modal: 223;
     margin-left: 10px;
     width: 100%;
   }
-  .header__logo{
+  .header__logo {
     display: none;
   }
 }

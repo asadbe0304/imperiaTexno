@@ -8,8 +8,9 @@ import Card from "./../Card/Card";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Pagination,FreeMode, Navigation } from "swiper";
 
 export default function App() {
   //   const [data, setData] = useState([]);
@@ -27,7 +28,7 @@ export default function App() {
     <>
       <div className="container">
         <div className="category-popular-top">
-          <h3 className="fw-bold">Популярные категории</h3>
+          <h3 className="fw-bold popular-caption">Популярные категории</h3>
         </div>
         <Swiper
           slidesPerView={4}
@@ -38,9 +39,10 @@ export default function App() {
           pagination={{
             clickable: false,
           }}
+          freeMode={true}
           grabCursor={true}
-          navigation={true}
-          modules={[Pagination, Navigation]}
+          navigation={false}
+          modules={[Pagination,FreeMode, Navigation]}
           breakpoints={{
             1210: {
               width: 1210,
@@ -48,9 +50,9 @@ export default function App() {
               // slidesPerGroup: 4
             },
             768: {
-              width: 768,
-              slidesPerView: 2,
-              spaceBetween: 0,
+              width: 840,
+              slidesPerView: 3,
+              spaceBetween: 10,
             },
             370: {
               width: 370,

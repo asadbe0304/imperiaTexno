@@ -26,19 +26,19 @@ const index = ({ show}) => {
             <div className="cart__body--card w-100 gap-2  d-flex justify-content-between align-items-start">
               <img src={Img} alt="images" className="product__img" />
               {/* <IoMdClose/> */}
-              <div className="d-flex flex-column gap-2 align-items-end justify-content-between">
-                <h3 className="order__title m-0">{"cate"}</h3>
-                <button className="btn d-flex justify-content-between flex-row align-items-center gap-1 fs-6 fw-bold">
-                  <IoMdClose className="close-cart" />
+              <div className="d-flex  flex-column gap-2 align-items-start justify-content-between">
+                <h3 className="order__title m-0">Card Title</h3>
+                <button className="btn btn-danger d-flex justify-content-between flex-row align-items-center fw-medium p-1">
+                  {/* <IoMdClose className="close-cart" /> */}
                   Remove
                 </button>
               </div>
               <div className="d-flex flex-column gap-2 align-items-center justify-content-between">
                 <span className="fw-bold"> {"0"} $</span>
                 <div className="count d-flex flex-row align-items-center justify-content-between">
-                  <button className="btn btn-white"> - </button>
+                  <button className="btn btn-warning  fw-bold"> - </button>
                   <p className=" border-1 rounded-0 p-2 m-0">0</p>
-                  <button className="btn btn-white">+</button>
+                  <button className="btn btn-success fw-bold">+</button>
                 </div>
               </div>
             </div>
