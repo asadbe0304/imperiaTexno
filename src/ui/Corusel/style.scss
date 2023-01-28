@@ -25,9 +25,14 @@
 .swipe-card{
   // position: fixed;
   width: 275px !important;
+  height: 400px!important;
   z-index: 30;
   transition: all .3s ease-in-out;
   background: #fff;
+}
+.card-title{
+  height: 45px;
+  overflow: hidden;
 }
 .swipe-card:hover{
   transform: scale(1.05);
@@ -187,6 +192,6 @@
     }
     .imgcard{
       width: 80%!important;
-      height: 80%!important;
+      height: 90%!important;
     }
   }
