@@ -180,7 +180,7 @@ export default function App() {
                       Art televison
                     </h4>
                     <span className="text-success nalichka fw-bold">
-                      Рате: {e.rate}
+                      Рате: {e.rating.rate}
                     </span>
                   </div>
                   <h4 className="card-title">{e.title}</h4>
