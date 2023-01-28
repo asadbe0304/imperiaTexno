@@ -4,6 +4,7 @@ import { createContext } from "react";
 import { context } from "./../../context/context";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BiHeart } from "react-icons/bi";
+import { FcLike } from "react-icons/fc";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Img from "./../../assets/images/im.jpg";
 import Load from "./../Loader/index";
@@ -16,6 +17,7 @@ import { FreeMode, Navigation } from "swiper";
 
 export default function App() {
   const data = useContext(context);
+  const [like, setLike] = useState(true)
   // const [data, setData] = useState([]);
   // const [item, setItem] = useState([])
   // )
@@ -192,7 +194,13 @@ export default function App() {
                         onClick={() => handleClick(e)}
                       />
                     </div>
-                    <BiHeart className="position-absolute like-heart" />
+                    <div onClick={() => setLike((e) => !e)}>
+                      {like ? (
+                        <BiHeart className="position-absolute like-heart" />
+                      ) : (
+                        <FcLike className="position-absolute like-heart" />
+                      )}
+                    </div>
                   </div>
                 </div>
                 {/* </div>   */}
