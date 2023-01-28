@@ -50,7 +50,7 @@ export default function App() {
               // slidesPerGroup: 4
             },
             768: {
-              width: 840,
+              width: 940,
               slidesPerView: 3,
               spaceBetween: 10,
             },

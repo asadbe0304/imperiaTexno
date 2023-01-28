@@ -30,6 +30,10 @@
     }
   }
 }
+.cart__body{
+  overflow-y: scroll;
+height: 400px;
+}
 .hide {
   transform: translateY(-1000%);
 }

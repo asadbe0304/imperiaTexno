@@ -1,10 +1,12 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 // Import Swiper React components
+import { createContext } from "react";
+import { context } from "./../../context/context";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BiHeart } from "react-icons/bi";
-import { context } from "./../../context/context";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Img from "./../../assets/images/im.jpg";
+import Load from "./../Loader/index";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,17 +15,21 @@ import "swiper/css/navigation";
 import { FreeMode, Navigation } from "swiper";
 
 export default function App() {
-  const [data, setData] = useState([]);
-  const [item, setItem] = useState([]);
-  // const handleClick = (e) => {
-  // item.push(e);
-  // console.log(item);
-  // };
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  }, []);
+  const data = useContext(context);
+  // const [data, setData] = useState([]);
+  // const [item, setItem] = useState([])
+  // )
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((res) => res.json())
+  //     .then((json) => setData(json));
+  // }, []);
+  // console.log(data);
+  const item = [];
+  const handleClick = (e) => {
+    item.push(e);
+    console.log(item);
+  };
   return (
     <>
       <Swiper
@@ -93,7 +99,7 @@ export default function App() {
             slidesPerView: 1,
             spaceBetween: 20,
           },
-          415:{
+          415: {
             width: 320,
             slidesPerView: 1,
             spaceBetween: 20,
@@ -103,22 +109,22 @@ export default function App() {
             spaceBetween: 20,
             slidesPerView: 1,
           },
-          390:{
+          390: {
             width: 300,
             spaceBetween: 20,
             slidesPerView: 1,
           },
-          380:{
+          380: {
             width: 290,
             spaceBetween: 20,
             slidesPerView: 1,
           },
-          370:{
+          370: {
             width: 280,
             spaceBetween: 20,
             slidesPerView: 1,
           },
-          360:{
+          360: {
             width: 270,
             spaceBetween: 20,
             slidesPerView: 1,
@@ -183,7 +189,7 @@ export default function App() {
                     <div className="bg-warning px-2 py-1 rounded-2">
                       <AiOutlineShoppingCart
                         className="shop-cart"
-                        // onClick={() => handleClick(e)}
+                        onClick={() => handleClick(e)}
                       />
                     </div>
                     <BiHeart className="position-absolute like-heart" />
@@ -194,11 +200,7 @@ export default function App() {
             );
           })
         ) : (
-          <div className="lds-ellipsis w-100">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <Load />
         )}
       </Swiper>
     </>
