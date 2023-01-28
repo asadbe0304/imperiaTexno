@@ -3,7 +3,7 @@ import "./style.scss";
 import Img from "./../../assets/images/logo.png";
 import { FiNavigation, FiShoppingCart } from "react-icons/fi";
 import { BsSearch } from "react-icons/bs";
-
+import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { RiAdminFill } from "react-icons/ri";
@@ -25,13 +25,13 @@ const index = () => {
           <div className="header w-100 py-2 d-flex justify-content-between align-items-center">
             <div className="head d-flex justify-content-center align-items-center gap-4">
               <div className="header__logo">
-                <a href="./" className="header__logo--link">
+                <NavLink to='/' className="header__logo--link">
                   <img
                     src={Img}
                     className="header__logo--img"
                     alt="images logo"
                   />
-                </a>
+                </NavLink>
               </div>
               <div className="header__location d-flex flex-column align-items-start navigation">
                 <div className="d-flex justify-content-center align-items-center gap-1 fs-6 text-black">
@@ -99,7 +99,9 @@ const index = () => {
               </div>
               <div className="header__like--order d-flex justify-content between gap-3">
                 <div className="admin">
+                  <NavLink to="/login" >
                   <RiAdminFill className="admin__icon" />
+                  </NavLink>
                 </div>
                 <div className="like">
                   <FcLike className="like__icon" />
@@ -116,8 +118,10 @@ const index = () => {
                 <p className="p-0 mx-2 my-0 order__text">
                   В корзине нет товаров
                 </p>
-                <GiHamburgerMenu className="Hambur"
-                onClick={()=>setOpen(e=>!e)} />
+                <GiHamburgerMenu
+                  className="Hambur"
+                  onClick={() => setOpen((e) => !e)}
+                />
                 <IoMdClose
                   className={`position-fixed close-arrow ${
                     show ? "show" : "hide"
@@ -128,7 +132,11 @@ const index = () => {
             </div>
           </div>
         </div>
-        <div className={`modal-menu bg-light w-100 flex-column d-flex justify-content-start align-items-start ${open ? "d-flex" :"d-none"}`}>
+        <div
+          className={`modal-menu bg-light w-100 flex-column d-flex justify-content-start align-items-start ${
+            open ? "d-flex" : "d-none"
+          }`}
+        >
           <div className="modal__top px-3 bg-black w-100 flex-row d-flex justify-content-between align-items-center gap-1">
             <div className="header__location-mobile text-white gap-2 py-2 d-flex  align-items-start navigation">
               <div className="d-flex justify-content-center fw-normal align-items-center gap-1 fs-6 text-black">
@@ -137,80 +145,84 @@ const index = () => {
               </div>
               Sankt peterburg
             </div>
-            <IoMdClose  className="text-white"
-            onClick={()=>setOpen(e=>!e)}/>
+            <IoMdClose
+              className="text-white"
+              onClick={() => setOpen((e) => !e)}
+            />
           </div>
-          <div className="header__call py-3 d-flex
-         px-3 justify-content-between gap-2 align-items-start flex-column">
-              <a
-                href="tel:+998932502719"
-                className="fw-bold header__call--tel text-black"
-              >
-                +7 (812) 200-49-00
-              </a>
-              <div className="d-flex flex-column align-items-start justify-content-between gap-2">
-                <p className="m-0 p-0 text-secondary call__text">
-                  +7 (800) 777-04-02
-                </p>
-                <p className="m-0 p-0 text-secondary call__text">
-                  пн-пт, 10:00-19:00
-                </p>
-              </div>
+          <div
+            className="header__call py-3 d-flex
+         px-3 justify-content-between gap-2 align-items-start flex-column"
+          >
+            <a
+              href="tel:+998932502719"
+              className="fw-bold header__call--tel text-black"
+            >
+              +7 (812) 200-49-00
+            </a>
+            <div className="d-flex flex-column align-items-start justify-content-between gap-2">
+              <p className="m-0 p-0 text-secondary call__text">
+                +7 (800) 777-04-02
+              </p>
+              <p className="m-0 p-0 text-secondary call__text">
+                пн-пт, 10:00-19:00
+              </p>
             </div>
-                <button
-                  href="#li"
-                  className="w-100 btn fw-bold btn btn-warning rounded-0 d-flex text-black gap-2 align-items-center"
-                  // onClick={() => setModal((e) => !e)}
-                >
-                  {/* {modal ? (
+          </div>
+          <button
+            href="#li"
+            className="w-100 btn fw-bold btn btn-warning rounded-0 d-flex text-black gap-2 align-items-center"
+            // onClick={() => setModal((e) => !e)}
+          >
+            {/* {modal ? (
                     <IoMdClose className="menu__category" />
                   ) : (
                     <GiHamburgerMenu className="menu__category" />
                   )} */}
-                  Category
-                </button>
+            Category
+          </button>
           <ul className="flex-row list-group d-flex flex-column justify-content-between p-0 px-3 modal-mobile-list align-items-start gap-3">
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Акции
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Оплата
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Установка
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Обмен и возврат
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Для бизнеса
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Контакты
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Статус заказа
-                </a>
-              </li>
-              <li className="list-items">
-                <a href="#li" className="modal-link text-black fw-bold">
-                  Доставка
-                </a>
-              </li>
-            </ul>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Акции
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Оплата
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Установка
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Обмен и возврат
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Для бизнеса
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Контакты
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Статус заказа
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#li" className="modal-link text-black fw-bold">
+                Доставка
+              </a>
+            </li>
+          </ul>
         </div>
       </header>
     </>
