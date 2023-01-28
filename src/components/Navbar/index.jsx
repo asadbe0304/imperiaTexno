@@ -103,12 +103,12 @@ const index = () => {
                 modal ? "d-flex" : "d-none"
               } category-modal d-flex justify-content-between flex-row bg-white w-100`}
             >
-              <div className="modal-left">
+              <div className="modal-left w-100">
                 <ul className="modal-list d-flex flex-column align-items-start  border-0">
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       {/* <GiArcheryTarget className="archer" /> */}
                       <img src={Img} alt="imagea" width={24} height={24} />
@@ -118,7 +118,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
@@ -128,7 +128,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
@@ -138,7 +138,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       {/* <GiArcheryTarget className="archer" /> */}
                       <img src={Img} alt="imagea" width={24} height={24} />
@@ -148,7 +148,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
@@ -158,7 +158,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer " /> */}
@@ -168,7 +168,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-baseline align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
@@ -178,7 +178,7 @@ const index = () => {
                   <li className="modal-item">
                     <a
                       href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-between align-items-center gap-2"
+                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
@@ -187,7 +187,7 @@ const index = () => {
                   </li>
                 </ul>
               </div>
-              <div
+              {/* <div
                 className="modal-right w-100 d-flex
             justify-content-between align-items-start gap-2 px-2"
               >
@@ -206,7 +206,7 @@ const index = () => {
                 <div className="modal__inner--right ">
                   <h3>Modal right</h3>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
