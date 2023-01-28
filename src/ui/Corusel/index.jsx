@@ -164,7 +164,7 @@ export default function App() {
         navigation={false}
         freeMode={true}
         modules={[FreeMode, Navigation]}
-        className="mySwiper px-4 d-flex justify-content-center py-5 gap-1 align-items-center"
+        className="mySwiper px-4 d-flex justify-content-center py-3 gap-1 align-items-center"
       >
         {data.length > 0 ? (
           data.map((e) => {

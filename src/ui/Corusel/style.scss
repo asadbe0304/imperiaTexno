@@ -68,11 +68,20 @@
   height: 220px !important;
 }
 .nalichka{
+  width: 60px;
   font-size: 13px;
   line-height: 16px;
 }
+.card__body--top{
+  margin-bottom: 20px!important;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start!important;
+}
 
-
+.art-title{
+  margin: 0!important;
+}
 .shop-cart{
   width: 30px;
   height: 30px;
