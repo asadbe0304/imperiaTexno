@@ -5,6 +5,8 @@ import { GiArcheryTarget } from "react-icons/gi";
 import Img from "./../../assets/images/holod.png";
 import { IoMdClose } from "react-icons/io";
 import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import Category from "./../../pages/Category";
 
 const index = () => {
   const bodyStyle = document.body.style;
@@ -28,7 +30,6 @@ const index = () => {
           <nav className="d-flex justify-content-between flex-row align-items-center">
             <div className="category__tab w-100">
               <button
-                
                 className="rounded-2 btn w-100 fw-bold btn btn-warning rounded-0 d-flex text-black gap-2 align-items-center"
                 onClick={() => setModal((e) => !e)}
               >
@@ -106,13 +107,20 @@ const index = () => {
               <div className="modal-left w-100">
                 <ul className="modal-list d-flex flex-column align-items-start  border-0">
                   <li className="modal-item">
+                    <NavLink className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2">
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      <img src={Img} alt="imagea" width={24} height={24} />
+                      Встраиваемая кухонная техника
+                    </NavLink>
+                  </li>
+                  <li className="modal-item">
                     <a
                       href="#link"
                       className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
                     >
-                      {/* <GiArcheryTarget className="archer" /> */}
                       <img src={Img} alt="imagea" width={24} height={24} />
-                      Встраиваемая кухонная техника
+                      {/* <GiArcheryTarget className="archer" /> */}
+                      Крупная бытовая техника
                     </a>
                   </li>
                   <li className="modal-item">
@@ -122,17 +130,7 @@ const index = () => {
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
-                      Встраиваемая кухонная техника
-                    </a>
-                  </li>
-                  <li className="modal-item">
-                    <a
-                      href="#link"
-                      className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2"
-                    >
-                      <img src={Img} alt="imagea" width={24} height={24} />
-                      {/* <GiArcheryTarget className="archer" /> */}
-                      Встраиваемая кухонная техника
+                      Телевизоры, аудио-видео, Hi-Fi
                     </a>
                   </li>
                   <li className="modal-item">
@@ -142,7 +140,7 @@ const index = () => {
                     >
                       {/* <GiArcheryTarget className="archer" /> */}
                       <img src={Img} alt="imagea" width={24} height={24} />
-                      Встраиваемая кухонная техника
+                      Мелкая кухонная техника
                     </a>
                   </li>
                   <li className="modal-item">
@@ -152,7 +150,7 @@ const index = () => {
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer" /> */}
-                      Встраиваемая кухонная техника
+                      Tехника для дома
                     </a>
                   </li>
                   <li className="modal-item">
@@ -162,7 +160,7 @@ const index = () => {
                     >
                       <img src={Img} alt="imagea" width={24} height={24} />
                       {/* <GiArcheryTarget className="archer " /> */}
-                      Встраиваемая кухонная техника
+                      Климатическая техника
                     </a>
                   </li>
                   <li className="modal-item">

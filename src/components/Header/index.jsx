@@ -97,7 +97,7 @@ const index = () => {
                   <BsSearch className="text-white fw-bold" />
                 </InputGroup.Text>
               </div>
-              <div className="header__like--order d-flex justify-content between gap-3">
+              <div className="header__like--order d-flex justify-content between">
                 <div className="admin">
                   <NavLink to="/login" >
                   <RiAdminFill className="admin__icon" />

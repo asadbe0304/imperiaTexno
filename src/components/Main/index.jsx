@@ -6,12 +6,13 @@ import Warant from "./../../ui/Warranty";
 import Recamendation from "./../../ui/Recomendation";
 import Category from "./../../ui/CategoryPopular";
 import Brand from "./../../ui/Brand/index";
-
+import { Outlet, Link } from "react-router-dom";
 import "./style.scss";
 const index = () => {
   return (
     <>
-          <Tel />
+      <Tel />
+        <Outlet />
       <section className="main__section">
         <div className="container">
           <div className="mt-5 hero">

@@ -19,22 +19,21 @@
   box-shadow: 0 0 0 1px #ededed;
   box-sizing: border-box;
   border: 1px solid transparent;
-  transition: all .3s ease-in-out;
- 
+  transition: all 0.3s ease-in-out;
 }
-.swipe-card{
+.swipe-card {
   // position: fixed;
   width: 275px !important;
-  height: 400px!important;
+  height: 400px !important;
   z-index: 30;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background: #fff;
 }
-.card-title{
+.card-title {
   height: 45px;
   overflow: hidden;
 }
-.swipe-card:hover{
+.swipe-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 10px 13px -7px #000;
 }
@@ -46,8 +45,8 @@
 .like-heart {
   top: 10px;
   right: 20px;
-  width: 30px;
-  height: 30px;
+  width: 20px !important;
+  height: 20px !important;
   cursor: pointer;
 }
 .recomendation__card {
@@ -56,7 +55,7 @@
   align-items: center;
   gap: 20px;
 }
-.card:hover{
+.card:hover {
   transform: scale(1.1);
 }
 ::-webkit-scrollbar {
@@ -64,146 +63,147 @@
 }
 
 .imgcard {
-  width: 200px!important;
-  height: 220px !important;
+  width: 134px !important;
+  height: 134px !important;
+  margin-bottom: 30px!important;
 }
-.nalichka{
+.nalichka {
   width: 60px;
   font-size: 13px;
   line-height: 16px;
 }
-.card__body--top{
-  margin-bottom: 20px!important;
+.card__body--top {
+  margin-bottom: 20px !important;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start!important;
+  align-items: flex-start !important;
 }
 
-.art-title{
-  margin: 0!important;
+.art-title {
+  margin: 0 !important;
 }
-.shop-cart{
+.shop-cart {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 .lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellip.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+.lds-ellipsis {
+  width: 120px !important;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+sis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
   }
-  .lds-ellip.lds-ellipsis {
-    display: inline-block;
-    position: relative;
-    width: 280px;
-    height: 280px;
+  100% {
+    transform: scale(1);
   }
-  .lds-ellipsis{
-    width: 120px!important;
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
   }
-  .lds-ellipsis div {
-    position: absolute;
-    top: 33px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #000;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  100% {
+    transform: scale(0);
   }
-  sis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
   }
-  .lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
+  100% {
+    transform: translate(24px, 0);
   }
-  .lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-  }
-  @keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
-  @media screen and (max-width:640px) {
-    .swipe-card{
-      display: flex;
-      flex-direction: row!important;
-      align-items: flex-start!important;
-    justify-content: space-between!important;
-      width:90% !important;
-      height: 200px!important;
-      padding: 20px!important ;
+}
+@media screen and (max-width: 640px) {
+  .swipe-card {
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    width: 90% !important;
+    height: 200px !important;
+    padding: 20px !important ;
 
-      img{
-        width: 100px !important;
-        height: 100px!important;
-        margin-right: 20px;
-      }
+    img {
+      width: 100px !important;
+      height: 100px !important;
+      margin-right: 20px;
     }
   }
-  @media screen and (max-width:480px) {
-    .swipe-card{
-      display: flex;
-      flex-direction: column!important;
-      align-items: center!important;
-    justify-content: space-between!important;
-      width:80% !important;
-      height: 320px!important;
-      padding: 20px!important ;
-      img{
-        width: 100px !important;
-        height: 100px!important;
-        margin-right: 20px;
-      }
+}
+@media screen and (max-width: 480px) {
+  .swipe-card {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 80% !important;
+    height: 320px !important;
+    padding: 20px !important ;
+    img {
+      width: 100px !important;
+      height: 100px !important;
+      margin-right: 20px;
     }
-    .card__body{
-      width: 100%!important;
-    }
-    .nalichka{
-      font-size: 12px!important;
-      line-height: 20px;
-    }
-    .art-title{
-      font-size: 12px!important;
-      line-height: 16px !important;
-    }
-    .card-title{
-      font-size: 14px!important;
-    }
-    .like-heart{
-      width: 22px!important;
+  }
+  .card__body {
+    width: 100% !important;
+  }
+  .nalichka {
+    font-size: 12px !important;
+    line-height: 20px;
+  }
+  .art-title {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+  .card-title {
+    font-size: 14px !important;
+  }
+  .like-heart {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .shop-cart {
+    width: 22px;
     height: 22px;
-    }
-    .shop-cart{
-      width: 22px;
-      height: 22px;
-    }
-    .card__footer--title{
-      font-size: 13px;
-    }
-    .imgcard{
-      width: 80%!important;
-      height: 90%!important;
-    }
   }
+  .card__footer--title {
+    font-size: 13px;
+  }
+  // .imgcard {
+  //   width: 80% !important;
+  //   height: 90% !important;
+  // }
+}
