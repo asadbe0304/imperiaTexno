@@ -43,7 +43,7 @@ const index = () => {
             </div>
             <div className="header__search d-flex justify-content-center align-itmes-center">
               {/* search bar */}
-              <InputGroup className="mb-3 search-bar">
+              <InputGroup className="mb-0 search-bar">
                 <Form.Control
                   placeholder="Search Products"
                   aria-label="Username"
