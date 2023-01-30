@@ -18,7 +18,7 @@
     .cart__head {
       position: relative;
       padding: 20px;
-      border-bottom: 1px solid gray;
+      // border-bottom: 1px solid gray;
       h2 {
         font-weight: 600;
         font-size: 30px;
@@ -30,6 +30,8 @@
     }
   }
 }
+
+
 .cart__body{
   overflow-y: scroll;
 height: 400px;
@@ -60,6 +62,7 @@ height: 400px;
   color: #262626;
 }
 .cart__body {
+  border-top: 1px solid gray;
   border-bottom: 1px solid gray;
 }
 .cart__price {

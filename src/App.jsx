@@ -22,7 +22,7 @@ const App = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 150 ? setSticky("sticky") : setSticky("");
+      windowHeight > 120 ? setSticky("sticky") : setSticky("");
     }
   };
   useEffect(() => {
@@ -31,7 +31,7 @@ const App = () => {
       .then((json) => setData(json));
   }, []);
   // console.log(data);
-  // const item = useContext(context)
+  const item = useContext(context)
   // const show = useContext(context);
   return (
     <>

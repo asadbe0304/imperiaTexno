@@ -19,7 +19,7 @@ export default function App() {
   const data = useContext(context);
   const [like, setLike] = useState(true)
   // const [data, setData] = useState([]);
-  // const [item, setItem] = useState([])
+  const [item, setItem] = useState([])
   // )
   // useEffect(() => {
   //   fetch("https://fakestoreapi.com/products")
@@ -27,11 +27,12 @@ export default function App() {
   //     .then((json) => setData(json));
   // }, []);
   // console.log(data);
-  const item = [];
+  // const item = [];
   const handleClick = (e) => {
     item.push(e);
     console.log(item);
   };
+  // console.log(data);
   return (
     <>
       <Swiper

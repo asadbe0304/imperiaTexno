@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./style.scss";
 import Img from "./../../assets/images/im.jpg";
 import Cart from "./../Corusel/index";
@@ -11,13 +11,13 @@ const index = ({ show }) => {
   // const shows = useContext(context)
   const item = useContext(context);
   useEffect(() => {
-    console.log(item);
+    // console.log(item);
   }, []);
   console.log(item);
   return (
     <>
       <div className={`layer-cart ${show ? "show" : "hide"}`}>
-        <div className="cart">
+        <div className="cart d-flex justify-content-between flex-column align-items-start ">
           <div className="cart__head d-flex justify-content-between flex-column align-items-end">
             <div className="d-flex justify-content-between align-items-center w-100">
               <h2 className="cart__title my-2">В корзине {item.length} товара</h2>
@@ -27,6 +27,7 @@ const index = ({ show }) => {
               className="close-arrow"
             /> */}
           </div>
+          <hr />
           <div className="cart__body w-100 d-flex p-4 flex-column align-items-start justify-content-between">
             {item.length > 0
               ? item.map((e) => {

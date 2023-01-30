@@ -12,8 +12,9 @@
       top: 30px;
       z-index: 233;
     }
-    transition: all 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
   }
+  
   .card__popular::before {
     position: absolute;
     top: 0;
@@ -24,12 +25,15 @@
     display: none;
     height: 100%;
     background: #eba000;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   
   }
   .card__popular:hover::before{
       display: block;
-      animation: after .2s both;
+      animation: after 0.2s both;
+  }
+  .card__popular:hover{
+    transform: scale(1.1);
   }
   @keyframes after{
       0%{
