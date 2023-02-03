@@ -14,7 +14,7 @@ const index = () => {
             Популярные бренды
             </h3>
         </div>
-        <div className="d-flex px-4 py-4 my-4 flex-wrap justify-content-around align-items-center gap-2">
+        <div className="d-flex brands-card px-4 py-4 my-4 flex-wrap justify-content-around align-items-center gap-2">
           <div className="card-brand border p-3 rounded-1">
             <img src={Img1} alt="images" width={150} height={80} />
           </div>
@@ -26,6 +26,9 @@ const index = () => {
           </div>
           <div className="card-brand border p-3 rounded-1">
             <img src={Img3} alt="images" width={150} height={80} />
+          </div>
+          <div className="card-brand border p-3 rounded-1">
+            <img src={Img2} alt="images" width={150} height={80} />
           </div>
           <div className="card-brand border p-3 rounded-1">
             <img src={Img4} alt="images" width={150} height={80} />

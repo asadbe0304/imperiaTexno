@@ -5,8 +5,8 @@ const index = () => {
   return (
     <>
       <a href="tel:+998932502719"className="tel">
-        <div className="rounded-5 p-3 position-fixed bottom-0 call bg-info d-flex justify-content-center align-items-center">
-          <BsFillTelephoneForwardFill className="w-100 h-100" />
+        <div className="rounded-5 p-3 position-fixed bottom-0 call bg-warning d-flex justify-content-center align-items-center">
+          <BsFillTelephoneForwardFill className="w-100 h-100 call-icon" />
         </div>
       </a>
     </>

@@ -15,6 +15,56 @@
 }
 .card {
   padding: 20px;
+  width: 275px !important;
+  box-shadow: 0 0 0 1px #ededed;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  img {
+    width: 240px;
+  }
+}
+.card-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #5a5858;
+}
+.like-heart {
+  top: 10px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.recomendation__card {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  height: 0px;
+}
+
+.recomendation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .recomendation__title {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #2d2e30;
+    text-align: left;
+  }
+}
+.card {
+  padding: 20px;
   width: 400px !important;
   box-shadow: 0 0 0 1px #ededed;
   box-sizing: border-box;
@@ -65,7 +115,7 @@
 .imgcard {
   width: 134px !important;
   height: 134px !important;
-  margin-bottom: 30px!important;
+  margin-bottom: 30px !important;
 }
 .nalichka {
   width: 60px;
@@ -87,64 +137,7 @@
   height: 30px;
   cursor: pointer;
 }
-.lds-ellipsis div:nth-child(1) {
-  left: 8px;
-  animation: lds-ellipsis1 0.6s infinite;
-}
-.lds-ellip.lds-ellipsis {
-  display: inline-block;
-  position: relative;
-  width: 280px;
-  height: 280px;
-}
-.lds-ellipsis {
-  width: 120px !important;
-}
-.lds-ellipsis div {
-  position: absolute;
-  top: 33px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #000;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-sis div:nth-child(2) {
-  left: 8px;
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(3) {
-  left: 32px;
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(4) {
-  left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
-}
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(24px, 0);
-  }
-}
+
 @media screen and (max-width: 640px) {
   .swipe-card {
     display: flex;
@@ -206,4 +199,10 @@ sis div:nth-child(2) {
   //   width: 80% !important;
   //   height: 90% !important;
   // }
+}
+
+@media screen and (max-width: 580px) {
+  .recomendation__title {
+    font-size: 18px !important;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
-// import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { useState, useEffect } from "react";
+import Load from "./../Loader/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BiHeart } from "react-icons/bi";
 import { FcLike } from "react-icons/fc";
@@ -8,36 +8,27 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { FreeMode, Navigation } from "swiper";
 import Img from "./../../assets/images/im.jpg";
-import Load from "./../Loader/index";
-import Spin from "./../../components/Spin/spin";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "./style.scss";
-
 const index = () => {
-  const [like, setLike] = useState(true);
+  const [like , setLike] = useState(false)
   const [data, setData] = useState([]);
-  const [spin, setSpin] = useState(false);
   // const [item, setItem] = useState([])
   // )
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((json) => {
-        setData(json);
-        setSpin(true);
-      })
-      .finally(setSpin(false));
+      .then((json) => setData(json));
   }, []);
   return (
     <>
-      <Spin spin={spin}/>
       <div className="recomendation d-flex flex-column w-100 justify-content-between align-items-center">
         <div className="recomendation__top py-1 d-flex justify-content-between align-items-center w-100">
-          <h3 className="recomendation__title">Наши рекомендации</h3>
+          <h3 className="recomendation__title">Xit Prodaja</h3>
           {/* <div className="d-flex justify-content-between align-items-center gap-3">
             <BsArrowLeft />
             <BsArrowRight />
@@ -178,7 +169,7 @@ const index = () => {
           className="mySwiper px-4 d-flex justify-content-center py-3 gap-1 align-items-center"
         >
           {data.length > 0 ? (
-            data.map((e) => {
+            data.slice(4, 14).map((e) => {
               return (
                 <SwiperSlide
                   // item={item}

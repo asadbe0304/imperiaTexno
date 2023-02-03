@@ -4,10 +4,10 @@ import Card from "./../../pages/Category/index";
 import {useParams} from "react-router-dom"
 
 const index = () => {
-    const {list}= useParams() 
+    // const {list}= useParams() 
   return (
     <>
-      <div className="category-page" id={list} >
+      <div className="category-page">
         <div className="container">
           <div className="category-card">
             <div className="category-content d-flex justify-content-between align-items-start flex-wrap gap-2">

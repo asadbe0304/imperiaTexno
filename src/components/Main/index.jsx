@@ -4,15 +4,15 @@ import Main from "./../../ui/Slide/index";
 import Img2 from "./../../ui/HeroImg";
 import Warant from "./../../ui/Warranty";
 import Recamendation from "./../../ui/Recomendation";
-import Category from "./../../ui/CategoryPopular";
+import Category from "./../../ui/PopularCategory";
 import Brand from "./../../ui/Brand/index";
+import XitProduct from "./../../ui/XitProduct/index";
 import { Outlet, Link } from "react-router-dom";
 import "./style.scss";
 const index = () => {
   return (
     <>
       <Tel />
-        <Outlet />
       <section className="main__section">
         <div className="container">
           <div className="mt-5 hero">
@@ -37,6 +37,9 @@ const index = () => {
         </div>
         <div>
           <Brand />
+        </div>
+        <div className="px-3">
+          <XitProduct />
         </div>
         <div className="container">
           <div className="d-flex w-75 px-2 py-4 mx-auto justify-content-center align-items-start flex-column gap-1">

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import "./style.scss";
 import Img from "./../../assets/images/logo.png";
+import Logo from "./../../assets/images/mobile.svg"
 import { FiNavigation, FiShoppingCart } from "react-icons/fi";
 import { BsSearch } from "react-icons/bs";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { RiAdminFill } from "react-icons/ri";
@@ -12,26 +13,31 @@ import { Badge } from "react-bootstrap";
 import Cart from "../../ui/Cart/index";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { IoMdClose } from "react-icons/io";
 const index = () => {
   const [show, setShow] = useState(false);
-  const [open, setOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);  
   return (
     <>
       <header className="w-100 bg-white">
         <div className="container">
           <Cart show={show} />
+          {/* <Cart/> */}
           <div className="header w-100 py-2 d-flex justify-content-between align-items-center">
             <div className="head d-flex justify-content-center align-items-center gap-4">
               <div className="header__logo">
-                <NavLink to='/' className="header__logo--link">
+                <Link to="/" className="header__logo--link">
                   <img
                     src={Img}
                     className="header__logo--img"
                     alt="images logo"
                   />
-                </NavLink>
+                </Link>
+                <Link>
+                <img src={Logo} alt="logo"
+                className="mobile_logo" />
+                </Link>
               </div>
               <div className="header__location d-flex flex-column align-items-start navigation">
                 <div className="d-flex justify-content-center align-items-center gap-1 fs-6 text-black">
@@ -41,6 +47,7 @@ const index = () => {
                 Sankt peterburg
               </div>
             </div>
+
             <div className="header__search d-flex justify-content-center align-itmes-center">
               {/* search bar */}
               <InputGroup className="mb-0 search-bar">
@@ -89,18 +96,21 @@ const index = () => {
             </div>
             <div className="header__inner align-items-center d-flex justify-content-between gap-3">
               {/* mobile search bar */}
-              <div className="mobile-search-btn m-0">
+              {/* <div
+                className="mobile-search-btn m-0"
+                onClick={(e) => dispatch({ type: "SET_SEARCH", payload: true })}
+              >
                 <InputGroup.Text
                   id="basic-addon1"
                   className="bg-warning border-0 rounded-2 m-0"
                 >
                   <BsSearch className="text-white fw-bold" />
                 </InputGroup.Text>
-              </div>
+              </div> */}
               <div className="header__like--order d-flex justify-content between">
                 <div className="admin">
-                  <NavLink to="/login" >
-                  <RiAdminFill className="admin__icon" />
+                  <NavLink to="/login">
+                    <RiAdminFill className="admin__icon" />
                   </NavLink>
                 </div>
                 <div className="like">
@@ -132,6 +142,8 @@ const index = () => {
             </div>
           </div>
         </div>
+
+        {/* modal menu */}
         <div
           className={`modal-menu bg-light w-100 flex-column d-flex justify-content-start align-items-start ${
             open ? "d-flex" : "d-none"

@@ -12,9 +12,18 @@ const index = () => {
   return (
     <>
       <div
-        className="sign w-100 d-flex
+        className="sign w-100 flex-column d-flex
       justify-content-center align-items-center"
       >
+        <div className="login-top d-flex flex-column aling-items-center w-50 justify-content-center">
+          <h1 className="text-warning text-center">Register account</h1>
+          <p className="text-center my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            necessitatibus suscipit molestiae architecto expedita omnis, in
+            magnam iste rem, mollitia, nam non provident quisquam animi. Animi
+            rerum similique ratione natus!
+          </p>
+        </div>
         <Form className="w-50 py-4 my-1 sign-form">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

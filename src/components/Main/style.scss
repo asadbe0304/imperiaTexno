@@ -15,6 +15,15 @@
 .site-waranty {
   background: #e4e4e4;
 }
+
+.search-mobile-bar{
+  // display: none;
+  width: 100%;
+}
+.search-mobile{
+  width: 100%;
+  border:1px solid #fac212;
+}
 @media screen and (max-width: 1230px) {
   .hero {
     .hero_left {

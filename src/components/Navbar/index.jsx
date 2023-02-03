@@ -2,6 +2,7 @@ import React from "react";
 import "./stye.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GiArcheryTarget } from "react-icons/gi";
+import Form from "react-bootstrap/Form";
 import Img from "./../../assets/images/holod.png";
 import { IoMdClose } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -9,14 +10,7 @@ import { Link, NavLink } from "react-router-dom";
 import Category from "./../../pages/Category";
 
 const index = () => {
-  const bodyStyle = document.body.style;
-
   const [modal, setModal] = useState(false);
-  const [lock, setLock] = useState(bodyStyle.overflowY === "hidden");
-  useEffect(() => {
-    bodyStyle.overflowY = lock ? "hidden" : "auto";
-  }, [lock, bodyStyle]);
-
   const [categrory, setCategory] = useState([]);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories/")
@@ -27,7 +21,16 @@ const index = () => {
     <>
       <div className="navbar position-relative">
         <div className="container">
-          <nav className="d-flex justify-content-between flex-row align-items-center">
+          <nav className="d-flex justify-content-between nav flex-row align-items-center">
+            <div
+              className="d-flex search-mobile-bar justify-content-center bg-white align-items-center flex-row">
+              <Form.Control
+                placeholder="Search Products"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                className={`search-mobile `}
+              />
+            </div>
             <div className="category__tab w-100">
               <button
                 className="rounded-2 btn w-100 fw-bold btn btn-warning rounded-0 d-flex text-black gap-2 align-items-center"
@@ -98,6 +101,8 @@ const index = () => {
               </li>
             </ul>
           </nav>
+
+          {/* modal navbar */}
           <div className={`modal-layer ${modal ? "d-flex" : "d-none"}`}>
             <div
               className={`modal-layer ${
@@ -107,11 +112,11 @@ const index = () => {
               <div className="modal-left w-100">
                 <ul className="modal-list d-flex flex-column align-items-start  border-0">
                   <li className="modal-item">
-                    <NavLink className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2">
+                    <Link className="text-black text-decoration-none fw-bold d-flex justify-content-start align-items-center gap-2">
                       {/* <GiArcheryTarget className="archer" /> */}
                       <img src={Img} alt="imagea" width={24} height={24} />
                       Встраиваемая кухонная техника
-                    </NavLink>
+                    </Link>
                   </li>
                   <li className="modal-item">
                     <a

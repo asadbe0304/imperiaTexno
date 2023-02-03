@@ -2,10 +2,11 @@ import React, { useRef, useState, useEffect, useContext } from "react";
 // Import Swiper React components
 import Img from "./../../assets/images/2e8f41b9.webp"
 import { Swiper, SwiperSlide } from "swiper/react";
+import Load from "../Loader/index"
 // import { BiHeart } from "react-icons/bi";
 // import { context } from "./../../context/context";
 // import { AiOutlineShoppingCart } from "react-icons/ai";
-import Card from "./../Card/Card";
+import Card from "../Card/Card";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -92,44 +93,7 @@ export default function App() {
                   </SwiperSlide>
                 );
               })
-            : "not"}
-
-          {/* <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card />
-          </SwiperSlide> */}
-          {/* {data.length > 0 ? (
-            data.map((e) => {
-              return (
-                <SwiperSlide>
-                  <Card data={data} />
-                </SwiperSlide>
-              );
-            })
-          ) : (
-            <div className="lds-ellipsis w-100">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          )} */}
+            : <Load/>}
         </Swiper>
       </div>
     </>

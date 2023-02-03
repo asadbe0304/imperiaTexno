@@ -3,17 +3,17 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar/index";
 import Login from "./pages/Login";
 import Sign from "./pages/Register/index";
-import { context } from "./context/context";
 import { useContext, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-// import item from "./ui/Corusel";
 import Category from "./pages/Category/index";
 import Main from "./components/Main/index";
+import Error from "./error/index";
+import { useSelector, useDispatch } from "react-redux";
 import { BiCategory } from "react-icons/bi";
 
 const App = () => {
-  const [data, setData] = useState([]);
+  // const data = useDispatch();
   const [sticky, setSticky] = useState("");
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -25,32 +25,29 @@ const App = () => {
       windowHeight > 120 ? setSticky("sticky") : setSticky("");
     }
   };
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  }, []);
-  // console.log(data);
-  const item = useContext(context)
-  // const show = useContext(context);
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       data({ type: "SET_DATA", payload: json });
+  //     });
+  // }, []);
   return (
     <>
-      <context.Provider value={data}>
-        <div className={`app-header ${sticky}`}>
-          <Header />
-          <Navbar />
-        </div>
-        <main className="site-main">
-          <Routes>
-            <Route path="/" element={<Main />}>
-              <Route path="/:id" element={<Category />} />
-            </Route>
-            <Route path="login" element={<Login />} />
-            <Route path="/sign" element={<Sign />} />
-          </Routes>
-        </main>
-        <Footer />
-      </context.Provider>
+      <div className={`app-header ${sticky}`}>
+        <Header />
+        <Navbar />
+      </div>
+      <main className="site-main">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/cat" element={<Category />} />
+          <Route path="login" element={<Login />} />
+          <Route path="/sign" element={<Sign />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   );
 };
